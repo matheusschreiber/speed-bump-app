@@ -16,14 +16,15 @@
 -->
 <resources>
     <string name="app_name">Speed Bump Detection</string>
-    <string name="returnText">Voltar</string>
-    <string name="camera_mode">Modo\nCâmera</string>
-    <string name="performance_mode">Modo\nMétricas</string>
-    <string name="alert_detection_text">ACHEI PLACA</string>
+    <string name="returnText">Go back</string>
+    <string name="camera_mode">Camera\nMode</string>
+    <string name="performance_mode">Metrics\nMode</string>
+    <string name="send_image">Test\nImage</string>
 
+    <string name="ok_message">All Ready!</string>
+    <string name="test_your_photo">Select the photo you are interested in testing</string>
 
-    <string name="ok_message">Tudo Certo!</string>
-    <string name="ok_description">O aplicativo está monitorando a câmera em buscas de placas de quebra-molas</string>
+    <string name="ok_description">The app is monitoring the camera, searching for speed bumps sings</string>
 
 
 
@@ -56,10 +57,7 @@
     </string-array>
 
     <string-array name="models_spinner_titles">
-        <item>MobileNet V1</item>
         <item>EfficientDet Lite0</item>
-        <item>EfficientDet Lite1</item>
-        <item>EfficientDet Lite2</item>
     </string-array>
 
 </resources>

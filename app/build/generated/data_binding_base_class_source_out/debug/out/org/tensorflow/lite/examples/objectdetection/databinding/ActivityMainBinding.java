@@ -28,19 +28,23 @@ public final class ActivityMainBinding implements ViewBinding {
   public final LinearLayout buttonCameraMode;
 
   @NonNull
-  public final LinearLayout buttonSimulateSignDetected;
+  public final LinearLayout buttonMetricsMode;
+
+  @NonNull
+  public final LinearLayout buttonTestImage;
 
   @NonNull
   public final FragmentContainerView fragmentContainer;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
       @NonNull ImageView alertDetection, @NonNull LinearLayout buttonCameraMode,
-      @NonNull LinearLayout buttonSimulateSignDetected,
+      @NonNull LinearLayout buttonMetricsMode, @NonNull LinearLayout buttonTestImage,
       @NonNull FragmentContainerView fragmentContainer) {
     this.rootView = rootView;
     this.alertDetection = alertDetection;
     this.buttonCameraMode = buttonCameraMode;
-    this.buttonSimulateSignDetected = buttonSimulateSignDetected;
+    this.buttonMetricsMode = buttonMetricsMode;
+    this.buttonTestImage = buttonTestImage;
     this.fragmentContainer = fragmentContainer;
   }
 
@@ -83,9 +87,15 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.buttonSimulateSignDetected;
-      LinearLayout buttonSimulateSignDetected = ViewBindings.findChildViewById(rootView, id);
-      if (buttonSimulateSignDetected == null) {
+      id = R.id.buttonMetricsMode;
+      LinearLayout buttonMetricsMode = ViewBindings.findChildViewById(rootView, id);
+      if (buttonMetricsMode == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonTestImage;
+      LinearLayout buttonTestImage = ViewBindings.findChildViewById(rootView, id);
+      if (buttonTestImage == null) {
         break missingId;
       }
 
@@ -96,7 +106,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((CoordinatorLayout) rootView, alertDetection, buttonCameraMode,
-          buttonSimulateSignDetected, fragmentContainer);
+          buttonMetricsMode, buttonTestImage, fragmentContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -96,6 +96,7 @@
                 android:background="@drawable/icon_shape"
                 android:layout_marginHorizontal="10sp"
                 android:layout_weight="1"
+                android:id="@+id/buttonMetricsMode"
                 >
                 <ImageView
                     android:layout_width="30sp"
@@ -118,20 +119,20 @@
                 android:background="@drawable/icon_shape"
                 android:layout_marginHorizontal="10sp"
                 android:layout_weight="1"
-                android:id="@+id/buttonSimulateSignDetected"
+                android:id="@+id/buttonTestImage"
                 >
                 <ImageView
                     android:layout_width="30sp"
                     android:layout_height="30sp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/camera"/>
+                    android:src="@drawable/photo"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:paddingVertical="5sp"
                     android:gravity="center"
-                    android:text="@string/camera_mode"/>
+                    android:text="@string/send_image"/>
             </LinearLayout>
 
         </LinearLayout>

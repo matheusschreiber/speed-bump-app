@@ -18,7 +18,7 @@ import java.lang.Override;
 import java.lang.String;
 import org.tensorflow.lite.examples.objectdetection.R;
 
-public final class ActivityStartBinding implements ViewBinding {
+public final class ActivityCameraBinding implements ViewBinding {
   @NonNull
   private final CoordinatorLayout rootView;
 
@@ -34,7 +34,7 @@ public final class ActivityStartBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
-  private ActivityStartBinding(@NonNull CoordinatorLayout rootView, @NonNull TextView appTitleBar,
+  private ActivityCameraBinding(@NonNull CoordinatorLayout rootView, @NonNull TextView appTitleBar,
       @NonNull RelativeLayout cameraModeGoBack, @NonNull FragmentContainerView fragmentContainer,
       @NonNull Toolbar toolbar) {
     this.rootView = rootView;
@@ -51,14 +51,14 @@ public final class ActivityStartBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ActivityStartBinding inflate(@NonNull LayoutInflater inflater) {
+  public static ActivityCameraBinding inflate(@NonNull LayoutInflater inflater) {
     return inflate(inflater, null, false);
   }
 
   @NonNull
-  public static ActivityStartBinding inflate(@NonNull LayoutInflater inflater,
+  public static ActivityCameraBinding inflate(@NonNull LayoutInflater inflater,
       @Nullable ViewGroup parent, boolean attachToParent) {
-    View root = inflater.inflate(R.layout.activity_start, parent, false);
+    View root = inflater.inflate(R.layout.activity_camera, parent, false);
     if (attachToParent) {
       parent.addView(root);
     }
@@ -66,7 +66,7 @@ public final class ActivityStartBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ActivityStartBinding bind(@NonNull View rootView) {
+  public static ActivityCameraBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
@@ -95,7 +95,7 @@ public final class ActivityStartBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityStartBinding((CoordinatorLayout) rootView, appTitleBar, cameraModeGoBack,
+      return new ActivityCameraBinding((CoordinatorLayout) rootView, appTitleBar, cameraModeGoBack,
           fragmentContainer, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);

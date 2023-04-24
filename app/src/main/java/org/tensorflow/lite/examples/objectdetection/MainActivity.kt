@@ -17,18 +17,12 @@
 package org.tensorflow.lite.examples.objectdetection
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import org.tensorflow.lite.examples.objectdetection.databinding.ActivityMainBinding
 
@@ -45,7 +39,13 @@ class MainActivity : AppCompatActivity(), OnSignDetectedAlert {
 
         val buttonCameraMode: LinearLayout = findViewById(R.id.buttonCameraMode)
         buttonCameraMode.setOnClickListener{
-            val intent = Intent(this, StartActivity::class    .java)
+            val intent = Intent(this, CameraActivity::class    .java)
+            startActivity(intent)
+        }
+
+        val buttonPhotoMode: LinearLayout = findViewById(R.id.buttonTestImage)
+        buttonPhotoMode.setOnClickListener{
+            val intent = Intent(this, PhotoActivity::class    .java)
             startActivity(intent)
         }
 

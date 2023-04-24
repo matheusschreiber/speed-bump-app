@@ -4,6 +4,14 @@
         "source": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_camera.xml",
+        "source": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/layout/activity_camera.xml"
+    },
+    {
+        "merged": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_photo.xml",
+        "source": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/layout/activity_photo.xml"
+    },
+    {
         "merged": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_camera.xml",
         "source": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/layout/fragment_camera.xml"
     },
@@ -14,5 +22,9 @@
     {
         "merged": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_start.xml",
         "source": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/layout/activity_start.xml"
+    },
+    {
+        "merged": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_image.xml",
+        "source": "/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/layout/activity_image.xml"
     }
 ]

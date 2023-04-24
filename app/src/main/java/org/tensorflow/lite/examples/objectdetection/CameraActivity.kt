@@ -1,21 +1,18 @@
 package org.tensorflow.lite.examples.objectdetection
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
-import org.tensorflow.lite.examples.objectdetection.databinding.ActivityStartBinding
+import org.tensorflow.lite.examples.objectdetection.databinding.ActivityCameraBinding
 
-class StartActivity : AppCompatActivity(), OnSignDetectedAlert {
+class CameraActivity : AppCompatActivity(), OnSignDetectedAlert {
 
-    private lateinit var activityStartBinding: ActivityStartBinding
+    private lateinit var activityStartBinding: ActivityCameraBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activityStartBinding = ActivityStartBinding.inflate(layoutInflater)
+        activityStartBinding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(activityStartBinding.root)
 
 

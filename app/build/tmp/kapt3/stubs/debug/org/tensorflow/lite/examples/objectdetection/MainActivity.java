@@ -7,6 +7,7 @@ public final class MainActivity extends androidx.appcompat.app.AppCompatActivity
     private org.tensorflow.lite.examples.objectdetection.databinding.ActivityMainBinding activityMainBinding;
     private android.widget.ImageView alertDetectionText;
     private boolean detectedState = false;
+    private java.util.HashMap _$_findViewCache;
     
     public MainActivity() {
         super();

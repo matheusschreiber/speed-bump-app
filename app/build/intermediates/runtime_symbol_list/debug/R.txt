@@ -795,6 +795,7 @@ int color background_floating_material_dark 0x7f06001d
 int color background_floating_material_light 0x7f06001e
 int color background_material_dark 0x7f06001f
 int color background_material_light 0x7f060020
+int color black 0x7f06008f
 int color bottom_sheet_background 0x7f060021
 int color bottom_sheet_text_color 0x7f060022
 int color bounding_box_color 0x7f060023
@@ -1260,6 +1261,7 @@ int drawable notification_template_icon_low_bg 0x7f08007e
 int drawable notification_tile_bg 0x7f08007f
 int drawable notify_panel_notification_icon_bg 0x7f080080
 int drawable performance 0x7f080081
+int drawable photo 0x7f080085
 int drawable tooltip_frame_dark 0x7f080083
 int drawable tooltip_frame_light 0x7f080084
 int id ALT 0x7f090000
@@ -1352,8 +1354,9 @@ int id bottom 0x7f090056
 int id bottom_sheet_layout 0x7f090057
 int id bounce 0x7f090058
 int id buttonCameraMode 0x7f090059
+int id buttonMetricsMode 0x7f09016c
 int id buttonPanel 0x7f09005a
-int id buttonSimulateSignDetected 0x7f09005b
+int id buttonTestImage 0x7f09016d
 int id cache_measures 0x7f09005c
 int id cameraModeGoBack 0x7f09005d
 int id camera_container 0x7f09005e
@@ -1426,6 +1429,9 @@ int id flip 0x7f0900a0
 int id forever 0x7f0900a1
 int id fragment_container 0x7f0900a2
 int id fragment_container_view_tag 0x7f0900a3
+int id galleryButton 0x7f09016f
+int id gallerySelected 0x7f090171
+int id galleryText 0x7f090172
 int id ghost_view 0x7f0900a4
 int id ghost_view_holder 0x7f0900a5
 int id gone 0x7f0900a6
@@ -1498,6 +1504,7 @@ int id pathRelative 0x7f0900e8
 int id percent 0x7f0900e9
 int id performance 0x7f0900ea
 int id permissions_fragment 0x7f0900eb
+int id photoModeGoBack 0x7f09016e
 int id pin 0x7f0900ec
 int id position 0x7f0900ed
 int id postLayout 0x7f0900ee
@@ -1682,8 +1689,9 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0c0018
 int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
+int layout activity_camera 0x7f0c003c
 int layout activity_main 0x7f0c001c
-int layout activity_start 0x7f0c001d
+int layout activity_photo 0x7f0c003d
 int layout custom_dialog 0x7f0c001e
 int layout design_bottom_navigation_item 0x7f0c001f
 int layout design_bottom_sheet_dialog 0x7f0c0020
@@ -1745,7 +1753,6 @@ int string abc_searchview_description_voice 0x7f100017
 int string abc_shareactionprovider_share_with 0x7f100018
 int string abc_shareactionprovider_share_with_application 0x7f100019
 int string abc_toolbar_collapse_description 0x7f10001a
-int string alert_detection_text 0x7f10001b
 int string alt_bottom_sheet_chevron 0x7f10001c
 int string alt_bottom_sheet_max_results_button_minus 0x7f10001d
 int string alt_bottom_sheet_max_results_button_plus 0x7f10001e
@@ -1782,7 +1789,9 @@ int string path_password_strike_through 0x7f10003c
 int string performance_mode 0x7f10003d
 int string returnText 0x7f10003e
 int string search_menu_title 0x7f10003f
+int string send_image 0x7f100041
 int string status_bar_notification_info_overflow 0x7f100040
+int string test_your_photo 0x7f100042
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
 int style Animation_AppCompat_Dialog 0x7f110002

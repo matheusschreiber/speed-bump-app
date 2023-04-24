@@ -40,132 +40,161 @@
 34    <uses-permission android:name="android.permission.CAMERA" />
 34-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:30:5-65
 34-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:30:22-62
-35    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-36    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-37    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+35    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+35-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:31:5-80
+35-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:31:22-77
+36    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+37    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 38
 39    <application
-39-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:32:5-78:19
+39-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:33:5-95:19
 40        android:allowBackup="true"
-40-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:36:9-35
+40-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:37:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 41-->[androidx.core:core:1.6.0] /home/matheus/.gradle/caches/transforms-3/22e584a398e49dc53a8e6a5e66f4da0c/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 42        android:debuggable="true"
 43        android:icon="@mipmap/ic_launcher"
-43-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:33:9-43
+43-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:34:9-43
 44        android:label="@string/app_name"
-44-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:35:9-41
+44-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:36:9-41
 45        android:roundIcon="@mipmap/ic_launcher_round"
-45-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:34:9-54
+45-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:35:9-54
 46        android:taskAffinity=""
-46-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:37:9-32
+46-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:38:9-32
 47        android:testOnly="true" >
 48        <activity
-48-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:40:9-60:20
+48-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:41:9-61:20
 49            android:name="org.tensorflow.lite.examples.objectdetection.MainActivity"
-49-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:41:13-41
+49-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:42:13-41
 50            android:clearTaskOnLaunch="true"
-50-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:42:13-45
+50-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:43:13-45
 51            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
-51-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:48:13-91
+51-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:49:13-91
 52            android:exported="true"
-52-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:44:13-36
+52-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:45:13-36
 53            android:icon="@mipmap/ic_launcher"
-53-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:45:13-47
+53-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:46:13-47
 54            android:resizeableActivity="true"
-54-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:47:13-46
+54-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:48:13-46
 55            android:rotationAnimation="seamless"
-55-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:46:13-49
+55-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:47:13-49
 56            android:theme="@style/AppTheme" >
-56-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:43:13-44
+56-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:44:13-44
 57
 58            <!-- Main app intent filter -->
 59            <intent-filter>
-59-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:52:13-55:29
+59-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:53:13-56:29
 60                <action android:name="android.intent.action.MAIN" />
-60-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:53:17-69
-60-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:53:25-66
+60-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:54:17-69
+60-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:54:25-66
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:54:17-77
-62-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:54:27-74
+62-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:55:17-77
+62-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:55:27-74
 63            </intent-filter>
 64
 65            <!-- Declare notch support -->
 66            <meta-data
-66-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:58:13-83
+66-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:13-83
 67                android:name="android.notch_support"
-67-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:58:24-60
+67-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:24-60
 68                android:value="true" />
-68-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:58:61-81
+68-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:61-81
 69        </activity>
 70        <activity
-70-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:62:9-76:20
-71            android:name="org.tensorflow.lite.examples.objectdetection.StartActivity"
-71-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:63:13-42
+70-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:63:9-77:20
+71            android:name="org.tensorflow.lite.examples.objectdetection.CameraActivity"
+71-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:64:13-43
 72            android:clearTaskOnLaunch="true"
-72-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:64:13-45
+72-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:65:13-45
 73            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
-73-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:70:13-91
+73-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:71:13-91
 74            android:exported="true"
-74-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:66:13-36
+74-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:67:13-36
 75            android:icon="@mipmap/ic_launcher"
-75-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:67:13-47
+75-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:68:13-47
 76            android:resizeableActivity="true"
-76-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:69:13-46
+76-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:70:13-46
 77            android:rotationAnimation="seamless"
-77-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:68:13-49
+77-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:69:13-49
 78            android:theme="@style/AppTheme" >
-78-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:65:13-44
+78-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:66:13-44
 79
 80            <!-- Declare notch support -->
 81            <meta-data
-81-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:58:13-83
+81-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:13-83
 82                android:name="android.notch_support"
-82-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:58:24-60
+82-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:24-60
 83                android:value="true" />
-83-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:58:61-81
+83-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:61-81
 84        </activity>
-85
-86        <uses-library
-86-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:25:9-27:40
-87            android:name="androidx.window.extensions"
-87-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:26:13-54
-88            android:required="false" />
-88-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:27:13-37
-89        <uses-library
-89-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:28:9-30:40
-90            android:name="androidx.window.sidecar"
-90-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:29:13-51
-91            android:required="false" />
-91-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:30:13-37
-92
-93        <service
-93-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:26:9-35:19
-94            android:name="androidx.camera.core.impl.MetadataHolderService"
-94-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:27:13-75
-95            android:enabled="false"
-95-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:28:13-36
-96            android:exported="false" >
-96-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:29:13-37
-97            <meta-data
-97-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:32:13-34:89
-98                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-98-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:33:17-103
-99                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-99-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:34:17-86
-100        </service>
-101
-102        <provider
-102-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-103            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-103-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-104            android:authorities="org.tensorflow.lite.examples.objectdetection.lifecycle-process"
-104-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-105            android:exported="false"
-105-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-106            android:multiprocess="true" />
-106-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-107    </application>
-108
-109</manifest>
+85        <activity
+85-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:79:9-93:20
+86            android:name="org.tensorflow.lite.examples.objectdetection.PhotoActivity"
+86-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:80:13-42
+87            android:clearTaskOnLaunch="true"
+87-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:81:13-45
+88            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+88-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:87:13-91
+89            android:exported="true"
+89-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:83:13-36
+90            android:icon="@mipmap/ic_launcher"
+90-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:84:13-47
+91            android:resizeableActivity="true"
+91-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:86:13-46
+92            android:rotationAnimation="seamless"
+92-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:85:13-49
+93            android:theme="@style/AppTheme" >
+93-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:82:13-44
+94
+95            <!-- Declare notch support -->
+96            <meta-data
+96-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:13-83
+97                android:name="android.notch_support"
+97-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:24-60
+98                android:value="true" />
+98-->/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/AndroidManifest.xml:59:61-81
+99        </activity>
+100
+101        <uses-library
+101-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:25:9-27:40
+102            android:name="androidx.window.extensions"
+102-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:26:13-54
+103            android:required="false" />
+103-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:27:13-37
+104        <uses-library
+104-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:28:9-30:40
+105            android:name="androidx.window.sidecar"
+105-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:29:13-51
+106            android:required="false" />
+106-->[androidx.window:window:1.0.0-alpha09] /home/matheus/.gradle/caches/transforms-3/fd89891908524ffdf904b2e997e8aae1/transformed/jetified-window-1.0.0-alpha09/AndroidManifest.xml:30:13-37
+107
+108        <service
+108-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:26:9-35:19
+109            android:name="androidx.camera.core.impl.MetadataHolderService"
+109-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:27:13-75
+110            android:enabled="false"
+110-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:28:13-36
+111            android:exported="false" >
+111-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:29:13-37
+112            <meta-data
+112-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:32:13-34:89
+113                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+113-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:33:17-103
+114                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+114-->[androidx.camera:camera-camera2:1.1.0-beta03] /home/matheus/.gradle/caches/transforms-3/9886d106f8a9677d73f154939dd178e4/transformed/jetified-camera-camera2-1.1.0-beta03/AndroidManifest.xml:34:17-86
+115        </service>
+116
+117        <provider
+117-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+118            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+118-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+119            android:authorities="org.tensorflow.lite.examples.objectdetection.lifecycle-process"
+119-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+120            android:exported="false"
+120-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+121            android:multiprocess="true" />
+121-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/matheus/.gradle/caches/transforms-3/d3b9f0ec91abda46eb69824da218d191/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+122    </application>
+123
+124</manifest>
