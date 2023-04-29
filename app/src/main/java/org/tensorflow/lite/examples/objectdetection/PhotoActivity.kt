@@ -105,7 +105,7 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
             .build()
         val detector = ObjectDetector.createFromFileAndOptions(
             this,
-            "mobilenetv1.tflite",
+            "speedbump.tflite",
             options
         )
 

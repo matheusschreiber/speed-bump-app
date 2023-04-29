@@ -92,8 +92,8 @@ class ObjectDetectorHelper(
 
         val modelName =
             when (currentModel) {
-                MODEL_EFFICIENTDETV0 -> "efficientdet-lite0.tflite"
-                else -> "efficientdet-lite0.tflite"
+                MODEL_SPEEDBUMP -> "speedbump.tflite"
+                else -> "speedbump.tflite"
             }
 
         try {
@@ -168,10 +168,7 @@ class ObjectDetectorHelper(
         const val DELEGATE_CPU = 0
         const val DELEGATE_GPU = 1
         const val DELEGATE_NNAPI = 2
-        const val MODEL_MOBILENETV1 = 0
-        const val MODEL_EFFICIENTDETV0 = 1
-        const val MODEL_EFFICIENTDETV1 = 2
-        const val MODEL_EFFICIENTDETV2 = 3
+        const val MODEL_SPEEDBUMP = 0
     }
 
 

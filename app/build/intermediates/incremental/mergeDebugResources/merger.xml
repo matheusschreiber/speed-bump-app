@@ -3953,7 +3953,7 @@
         <item>GPU</item>
         <item>NNAPI</item>
     </string-array><string-array name="models_spinner_titles">
-        <item>EfficientDet Lite0</item>
+        <item>SpeedBump (EDLite0)</item>
     </string-array><string name="send_image">Test\nImage</string><string name="test_your_photo">Select the photo you are interested in testing</string></file><file path="/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/values/colors.xml" qualifiers=""><color name="bounding_box_color">#FF6F00</color><color name="toolbar_background">#EEEEEE</color><color name="ic_launcher_background">#FFFFFF</color><color name="bottom_sheet_background">#EEEEEE</color><color name="bottom_sheet_text_color">@android:color/black</color><color name="icActive">#FFFFFFFF</color><color name="icFocused">#DDFFFFFF</color><color name="icPressed">#AAFFFFFF</color><color name="transparent">#00000000</color><color name="white">#FFFFFFFF</color><color name="light_red">#FFF2F2</color><color name="red">#FF5E5E</color><color name="black">#00000000</color></file><file path="/home/matheus/Documentos/IC/mobile/SpeedBumpDetectorApp/app/src/main/res/values/styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style><style name="BottomSheetSpinnerItemStyle" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
         <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
