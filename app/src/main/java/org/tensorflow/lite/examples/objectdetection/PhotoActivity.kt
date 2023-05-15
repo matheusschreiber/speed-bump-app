@@ -140,30 +140,35 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
         detectionResults.forEach {
             // draw bounding box
             pen.color = Color.RED
-            pen.strokeWidth = 8F
+            pen.strokeWidth = 16F
             pen.style = Paint.Style.STROKE
             val box = it.boundingBox
             canvas.drawRect(box, pen)
 
 
             val tagSize = Rect(0, 0, 0, 0)
+            pen.textSize = 136F
+            pen.getTextBounds(it.text, 0, it.text.length, tagSize)
+
+            // Calculate the bounding rectangle for the text
+            val textRect = RectF(
+                box.left,
+                box.top,
+                box.left + tagSize.width(),
+                box.top + tagSize.height()*1.3F
+            )
+
+            pen.style = Paint.Style.FILL
+            pen.color = Color.BLACK
+            canvas.drawRect(textRect, pen)
 
             // calculate the right font size
             pen.style = Paint.Style.FILL_AND_STROKE
-            pen.color = Color.YELLOW
+            pen.color = Color.WHITE
             pen.strokeWidth = 2F
 
-            pen.textSize = 96F
-            pen.getTextBounds(it.text, 0, it.text.length, tagSize)
-            val fontSize: Float = pen.textSize * box.width() / tagSize.width()
-
-            // adjust the font size so texts are inside the bounding box
-            if (fontSize < pen.textSize) pen.textSize = fontSize
-
-            var margin = (box.width() - tagSize.width()) / 2.0F
-            if (margin < 0F) margin = 0F
             canvas.drawText(
-                it.text, box.left + margin,
+                it.text, box.left,
                 box.top + tagSize.height().times(1F), pen
             )
         }
