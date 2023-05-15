@@ -8,14 +8,19 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
-import android.widget.*
+import android.widget.ImageView
+import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import org.tensorflow.lite.examples.objectdetection.databinding.ActivityPhotoBinding
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
+import java.io.File
+
 
 class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
 
@@ -70,21 +75,30 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
         if (requestCode == 2 && resultCode == Activity.RESULT_OK && data != null) {
             pickedPhoto = data.data
             if (pickedPhoto != null) {
+
+                val cursor = contentResolver.query(pickedPhoto!!, arrayOf(MediaStore.Images.Media.DISPLAY_NAME), null, null, null)
+                cursor?.moveToFirst()
+                val imageName = cursor?.getString(0)
+                cursor?.close()
+
+
                 if (Build.VERSION.SDK_INT >= 28) {
                     val source = ImageDecoder.createSource(this.contentResolver, pickedPhoto!!)
                     pickedBitMap = ImageDecoder.decodeBitmap(source)
                     galleryPhoto.setImageBitmap(pickedBitMap)
-                    runObjectDetection(pickedBitMap!!, galleryPhoto)
+                    runObjectDetection(pickedBitMap!!, galleryPhoto, imageName)
                     galleryText.setVisibility(View.INVISIBLE)
                     galleryButton.setVisibility(View.INVISIBLE)
                 }
                 else {
                     pickedBitMap = MediaStore.Images.Media.getBitmap(this.contentResolver,pickedPhoto)
                     galleryPhoto.setImageBitmap(pickedBitMap)
-                    runObjectDetection(pickedBitMap!!, galleryPhoto)
+                    runObjectDetection(pickedBitMap!!, galleryPhoto, imageName)
                     galleryText.setVisibility(View.INVISIBLE)
                     galleryButton.setVisibility(View.INVISIBLE)
                 }
+
+
             }
         }
 
@@ -93,7 +107,7 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
 
     override fun onSignDetected(detected:Boolean) {}
 
-    private fun runObjectDetection(bitmap: Bitmap, galleryPhoto: ImageView) {
+    private fun runObjectDetection(bitmap: Bitmap, galleryPhoto: ImageView, imageName: String?) {
         // Step 1: Create TFLite's TensorImage object
         var processedBitmap = bitmap.copy(Bitmap.Config.ARGB_8888,true)
         val image = TensorImage.fromBitmap(processedBitmap)
@@ -123,6 +137,22 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
         }
         // Draw the detection result on the bitmap and show it.
         val imgWithResult = drawDetectionResult(bitmap, resultToDisplay)
+
+        // Logging the detection result on a file
+        val directory = getExternalFilesDir(null)
+        val imageNameWithoutExtension = imageName?.split('.')?.get(0)
+        val fileName = "output-$imageNameWithoutExtension.txt"
+        try {
+            val file = File(directory, fileName)
+            file.writeText(resultToDisplay.toString())
+            Log.d("FileWrite", "Successfully wrote file $fileName")
+        } catch (e: Exception) {
+            Log.e("FileWrite", "Error writing file $fileName: ${e.message}")
+        }
+
+        // Debug
+        Log.d("RESULTS", resultToDisplay.toString())
+
         runOnUiThread {
             galleryPhoto.setImageBitmap(imgWithResult)
         }
@@ -144,7 +174,6 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
             pen.style = Paint.Style.STROKE
             val box = it.boundingBox
             canvas.drawRect(box, pen)
-
 
             val tagSize = Rect(0, 0, 0, 0)
             pen.textSize = 136F
