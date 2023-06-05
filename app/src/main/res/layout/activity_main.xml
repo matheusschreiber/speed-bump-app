@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="430sp"
-            android:paddingHorizontal="20sp"
+            android:gravity="center_horizontal"
             android:baselineAligned="false">
 
             <LinearLayout
@@ -71,8 +71,7 @@
                 android:layout_height="100sp"
                 android:orientation="vertical"
                 android:background="@drawable/icon_shape"
-                android:layout_marginHorizontal="10sp"
-                android:layout_weight="1"
+                android:layout_marginHorizontal="20sp"
                 android:id="@+id/buttonCameraMode"
                 >
                 <ImageView
@@ -94,31 +93,7 @@
                 android:layout_height="100sp"
                 android:orientation="vertical"
                 android:background="@drawable/icon_shape"
-                android:layout_marginHorizontal="10sp"
-                android:layout_weight="1"
-                android:id="@+id/buttonMetricsMode"
-                >
-                <ImageView
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/performance"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:paddingVertical="5sp"
-                    android:gravity="center"
-                    android:text="@string/performance_mode"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:orientation="vertical"
-                android:background="@drawable/icon_shape"
-                android:layout_marginHorizontal="10sp"
-                android:layout_weight="1"
+                android:layout_marginHorizontal="20sp"
                 android:id="@+id/buttonTestImage"
                 >
                 <ImageView
@@ -140,5 +115,8 @@
 
     </FrameLayout>
 
+    <include
+        android:id="@+id/bottom_main_layout"
+        layout="@layout/info_bottom_main" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

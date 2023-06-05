@@ -19,12 +19,12 @@
     <string name="returnText">Go back</string>
     <string name="camera_mode">Camera\nMode</string>
     <string name="performance_mode">Metrics\nMode</string>
-    <string name="send_image">Test\nImage</string>
+    <string name="send_image">Upload\nImage</string>
 
-    <string name="ok_message">All Ready!</string>
-    <string name="test_your_photo">Select the photo you are interested in testing</string>
+    <string name="ok_message">Searching…</string>
+    <string name="test_your_photo">Click on the icon above to upload an image.</string>
 
-    <string name="ok_description">The app is monitoring the camera, searching for speed bumps sings</string>
+    <string name="ok_description">The app is monitoring the camera, searching for speed bumps signs</string>
 
 
 
@@ -49,6 +49,17 @@
     <string name="label_threads">Number of Threads</string>
     <string name="label_delegate">Delegate</string>
     <string name="label_models">ML Model</string>
+
+
+    <string name="label_main_bottom_title">INFORMATION</string>
+    <string name="label_main_bottom_subtitle">ABOUT THE PROJECT</string>
+
+    <string name="label_main_bottom_info_title">HOW IT HAPPENS</string>
+    <string name="label_main_bottom_info_text">The app continuously uses the image from the back camera to
+        search for the speed bump signs according to the brazilian official sign, on over its 15 variations.
+        When detected, the app generates a sound effect and shows a popup, indicating that a sign was detected.
+        Also an icon appears on the screen on the top-right corner. </string>
+
 
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>

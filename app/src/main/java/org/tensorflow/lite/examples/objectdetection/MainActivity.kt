@@ -17,13 +17,17 @@
 package org.tensorflow.lite.examples.objectdetection
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import org.tensorflow.lite.examples.objectdetection.databinding.ActivityCameraBinding
 import org.tensorflow.lite.examples.objectdetection.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), OnSignDetectedAlert {
@@ -31,6 +35,7 @@ class MainActivity : AppCompatActivity(), OnSignDetectedAlert {
     private lateinit var activityMainBinding: ActivityMainBinding
     private lateinit var alertDetectionText: ImageView
     private var detectedState: Boolean = false
+    private var mMediaPlayer: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,15 +80,25 @@ class MainActivity : AppCompatActivity(), OnSignDetectedAlert {
         v.startAnimation(anim);
     }
 
+    fun soundAlert() {
+        Toast.makeText(this, "Speed bump detected", Toast.LENGTH_SHORT).show()
+        if (mMediaPlayer == null) {
+            mMediaPlayer = MediaPlayer.create(this, R.raw.detection_soundeffect)
+            mMediaPlayer!!.start()
+        } else mMediaPlayer!!.start()
+    }
+
     override fun onSignDetected(detected:Boolean) {
         runOnUiThread{
             if (detected && !detectedState){
                 detectedState=true
                 scaleView(alertDetectionText, startScale = .0f, endScale = .8f)
+                soundAlert()
             } else if (!detected && detectedState) {
                 scaleView(alertDetectionText, startScale = .8f, endScale = 0f)
                 detectedState=false
             }
         }
+
     }
 }

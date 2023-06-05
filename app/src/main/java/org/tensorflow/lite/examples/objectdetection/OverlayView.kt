@@ -43,8 +43,6 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
 
     private var bounds = Rect()
 
-    private var mMediaPlayer: MediaPlayer? = null
-
     init {
         initPaints()
     }
@@ -109,15 +107,6 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
             canvas.drawText(drawableText, left, top + bounds.height(), textPaint)
         }
     }
-
-    fun popup() {
-        Toast.makeText(context, "Speed Bump detected", Toast.LENGTH_SHORT).show()
-        if (mMediaPlayer == null) {
-            mMediaPlayer = MediaPlayer.create(context, R.raw.detection_soundeffect)
-            mMediaPlayer!!.start()
-        } else mMediaPlayer!!.start()
-    }
-
 
     fun setResults(
       detectionResults: MutableList<Detection>,

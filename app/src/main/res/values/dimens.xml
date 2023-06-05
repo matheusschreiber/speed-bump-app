@@ -29,5 +29,9 @@
     <dimen name="bottom_sheet_spinner_delegate_min_width">160dp</dimen>
     <dimen name="bottom_sheet_spinner_model_min_width">240dp</dimen>
 
+    <!-- Main Bottom info scroll -->
+    <dimen name="main_info_title">17sp</dimen>
+    <dimen name="main_info_subtitle">30sp</dimen>
+
     <integer name="bottom_sheet_control_text_min_ems">3</integer>
 </resources>
