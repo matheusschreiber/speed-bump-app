@@ -193,6 +193,38 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                     /* no op */
                 }
             }
+
+        // When clicked, lower detection required for alert sign
+        fragmentCameraBinding.bottomSheetLayout.detectionsRequiredMinus.setOnClickListener {
+            if (objectDetectorHelper.detectionsRequired > 0) {
+                objectDetectorHelper.detectionsRequired -= 1
+                updateControlsUi()
+            }
+        }
+
+        // When clicked, lower detection required for alert sign
+        fragmentCameraBinding.bottomSheetLayout.detectionsRequiredPlus.setOnClickListener {
+            if (objectDetectorHelper.detectionsRequired < 100) {
+                objectDetectorHelper.detectionsRequired += 1
+                updateControlsUi()
+            }
+        }
+
+        // When clicked, lower detection overlap for alert sign
+        fragmentCameraBinding.bottomSheetLayout.detectionsOverlapMinus.setOnClickListener {
+            if (objectDetectorHelper.detectionsOverlap > 0) {
+                objectDetectorHelper.detectionsOverlap -= 1
+                updateControlsUi()
+            }
+        }
+
+        // When clicked, lower detection overlap for alert sign
+        fragmentCameraBinding.bottomSheetLayout.detectionsOverlapPlus.setOnClickListener {
+            if (objectDetectorHelper.detectionsOverlap < 100) {
+                objectDetectorHelper.detectionsOverlap += 1
+                updateControlsUi()
+            }
+        }
     }
 
     // Update the values displayed in the bottom sheet. Reset detector.
@@ -203,6 +235,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             String.format("%.2f", objectDetectorHelper.threshold)
         fragmentCameraBinding.bottomSheetLayout.threadsValue.text =
             objectDetectorHelper.numThreads.toString()
+        fragmentCameraBinding.bottomSheetLayout.detectionsRequiredValue.text =
+            objectDetectorHelper.detectionsRequired.toString()
+        fragmentCameraBinding.bottomSheetLayout.detectionsOverlapValue.text =
+            objectDetectorHelper.detectionsOverlap.toString()
 
         // Needs to be cleared instead of reinitialized because the GPU
         // delegate needs to be initialized on the thread using it when applicable

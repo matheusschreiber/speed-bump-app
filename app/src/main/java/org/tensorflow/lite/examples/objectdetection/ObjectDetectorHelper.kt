@@ -39,7 +39,8 @@ class ObjectDetectorHelper(
     var currentModel: Int = 0,
     val context: Context,
     val objectDetectorListener: DetectorListener?,
-    var detectionSpan: Int = 0,
+    var detectionsRequired: Int = 30,
+    var detectionsOverlap: Int = 30,
 ) {
 
     // For this example this needs to be a var so it can be reset on changes. If the ObjectDetector
@@ -129,7 +130,9 @@ class ObjectDetectorHelper(
 
         val results = objectDetector?.detect(tensorImage)
 
-        alertDetection(results)
+//        alertDetection(results)
+
+        transferDetection(results)
 
         inferenceTime = SystemClock.uptimeMillis() - inferenceTime
 
@@ -150,18 +153,8 @@ class ObjectDetectorHelper(
         )
     }
 
-    private fun alertDetection(array: MutableList<Detection>?) {
-        if (array != null) {
-            for (result in array){
-                if (result.categories[0].score > 0.9){
-                    detectionSpan=20
-                }
-            }
-            if (detectionSpan>0) {
-                signDetectedListener.onSignDetected(true)
-                detectionSpan-=1
-            } else signDetectedListener.onSignDetected(false)
-        }
+    private fun transferDetection(array: MutableList<Detection>?) {
+        signDetectedListener.onSignDetected(array, threshold, detectionsRequired, detectionsOverlap)
     }
 
     companion object {
@@ -174,9 +167,8 @@ class ObjectDetectorHelper(
 
 }
 
-
 interface OnSignDetectedAlert {
-    fun onSignDetected(detected:Boolean)
+    fun onSignDetected(results:MutableList<Detection>?, threshold:Float, detectionsRequired:Int, detectionsOverlap: Int)
 }
 
 

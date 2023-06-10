@@ -34,4 +34,6 @@
     <dimen name="main_info_subtitle">30sp</dimen>
 
     <integer name="bottom_sheet_control_text_min_ems">3</integer>
+    <integer name="int_detections_required_value">30</integer>
+    <integer name="int_detections_overlap_value">30</integer>
 </resources>

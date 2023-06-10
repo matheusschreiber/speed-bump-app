@@ -18,6 +18,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import org.tensorflow.lite.examples.objectdetection.databinding.ActivityPhotoBinding
 import org.tensorflow.lite.support.image.TensorImage
+import org.tensorflow.lite.task.vision.detector.Detection
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
 import java.io.File
 
@@ -105,7 +106,7 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    override fun onSignDetected(detected:Boolean) {}
+    override fun onSignDetected(results:MutableList<Detection>?, threshold:Float, detectionsRequired:Int, detectionsOverlap: Int) {}
 
     private fun runObjectDetection(bitmap: Bitmap, galleryPhoto: ImageView, imageName: String?) {
         // Step 1: Create TFLite's TensorImage object

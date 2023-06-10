@@ -101,8 +101,6 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
                 textBackgroundPaint
             )
 
-//            popup()
-
             // Draw text for detected object
             canvas.drawText(drawableText, left, top + bounds.height(), textPaint)
         }
