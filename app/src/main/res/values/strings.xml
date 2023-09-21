@@ -76,7 +76,10 @@
     </string-array>
 
     <string-array name="models_spinner_titles">
-        <item>SpeedBump (EDLite0)</item>
+        <item>OLD</item>
+        <item>WBLUR</item>
+        <item>NBLUR</item>
+        <item>TINY</item>
     </string-array>
 
 </resources>
