@@ -120,7 +120,7 @@ class PhotoActivity : AppCompatActivity(), OnSignDetectedAlert {
             .build()
         val detector = ObjectDetector.createFromFileAndOptions(
             this,
-            "speedbump.tflite",
+            "40k_no_blur.tflite",
             options
         )
 

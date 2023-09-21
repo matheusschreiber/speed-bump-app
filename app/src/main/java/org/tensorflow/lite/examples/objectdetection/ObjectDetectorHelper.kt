@@ -39,8 +39,8 @@ class ObjectDetectorHelper(
     var currentModel: Int = 0,
     val context: Context,
     val objectDetectorListener: DetectorListener?,
-    var detectionsRequired: Int = 30,
-    var detectionsOverlap: Int = 30,
+    var detectionsRequired: Int = 20,
+    var detectionsOverlap: Int = 60,
 ) {
 
     // For this example this needs to be a var so it can be reset on changes. If the ObjectDetector
@@ -93,8 +93,11 @@ class ObjectDetectorHelper(
 
         val modelName =
             when (currentModel) {
-                MODEL_SPEEDBUMP -> "speedbump.tflite"
-                else -> "speedbump.tflite"
+                OLD -> "backup.tflite"
+                WBLUR -> "40k_with_blur.tflite"
+                NBLUR -> "40k_no_blur.tflite"
+                TINY -> "40k_no_blur_tiny.tflite"
+                else -> "40k_no_blur.tflite"
             }
 
         try {
@@ -161,7 +164,10 @@ class ObjectDetectorHelper(
         const val DELEGATE_CPU = 0
         const val DELEGATE_GPU = 1
         const val DELEGATE_NNAPI = 2
-        const val MODEL_SPEEDBUMP = 0
+        const val OLD = 0
+        const val WBLUR = 1
+        const val NBLUR = 2
+        const val TINY = 3
     }
 
 

@@ -14,11 +14,13 @@ class CameraActivity : AppCompatActivity(), OnSignDetectedAlert {
 
     private lateinit var activityStartBinding: ActivityCameraBinding
     private var mMediaPlayer: MediaPlayer? = null
-    private var detectedState: Boolean = false
     private var hasPlayedRecently: Boolean = false
+
+    private var hasDetected: Boolean = false
     private var detectionsCounter: Int = 0
-    private var detectionsRequiredShared: Int = 30
-    private var detectionsOverlapShared: Int = 30
+
+    private var detectionsRequiredShared: Int = 20
+    private var detectionsOverlapShared: Int = 60
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +29,8 @@ class CameraActivity : AppCompatActivity(), OnSignDetectedAlert {
         setContentView(activityStartBinding.root)
 
         val intent = Intent(this, MainActivity::class    .java)
-        detectionsRequiredShared = intent.getIntExtra("detections_required", 30)
-        detectionsOverlapShared = intent.getIntExtra("detections_overlap", 30)
+        detectionsRequiredShared = intent.getIntExtra("detections_required", 20)
+        detectionsOverlapShared = intent.getIntExtra("detections_overlap", 60)
 
         val goBackButton: RelativeLayout = findViewById(R.id.cameraModeGoBack)
         goBackButton.setOnClickListener{
@@ -49,42 +51,34 @@ class CameraActivity : AppCompatActivity(), OnSignDetectedAlert {
 
     override fun onSignDetected(results:MutableList<Detection>?, threshold:Float, detectionsRequired:Int, detectionsOverlap: Int) {
         runOnUiThread{
-            detectedState = false
+            hasDetected = false
             if (results != null) {
 
                 // counting the successful detections
                 for (result in results){
                     if (result.categories[0].score > threshold){
                         detectionsCounter+=1
-                        detectedState=true
+                        hasDetected=true
                     }
                 }
 
+                Log.d("RESULTS", results.toString())
                 Log.d("COUNTER_CAMERA", detectionsCounter.toString())
 
-                // if num of detection is already above the required, sign the alert
-                if (detectedState && detectionsCounter>=detectionsRequired) {
+                // if num of detection is already at the required level, sound the alert
+                if (hasDetected && detectionsCounter==detectionsRequired) {
+                    soundAlert()
                     detectionsCounter=detectionsOverlap
 
-                // if its below, wait until the overlap ends before releasing the alert
-                } else if (detectedState && detectionsCounter>0) {
-                    detectedState=false
-
-                // if no detections are encountered for a while and the counter is now 0, then it can alert again
-                } else if (detectionsCounter==0) {
-                    detectedState=false
-                    hasPlayedRecently=false
-                }
+                // if num of detections is above the required, it means the alert has been played recently
+                } else if (hasDetected && detectionsCounter>detectionsRequired) {
+                    detectionsCounter = detectionsOverlap
 
                 // the counter goes down with the passage of time
-                if (detectionsCounter>0) detectionsCounter-=1
+                } else if (!hasDetected && detectionsCounter>0) detectionsCounter-=1
             }
 
-            // playing sound alert
-            if (detectedState && !hasPlayedRecently) {
-                soundAlert()
-                hasPlayedRecently = true
-            }
+            // TODO: procurar por detectedState nas outras aprtes do código para limpar depois
 
             // receiving the updated parameters from the controllers on UI
             detectionsRequiredShared = detectionsRequired
