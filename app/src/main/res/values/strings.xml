@@ -79,7 +79,8 @@
         <item>OLD</item>
         <item>WBLUR</item>
         <item>NBLUR</item>
-        <item>TINY</item>
+        <item>TINY_NBLUR</item>
+        <item>TINY_WBLUR</item>
     </string-array>
 
 </resources>
