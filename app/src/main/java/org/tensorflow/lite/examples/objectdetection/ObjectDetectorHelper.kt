@@ -98,6 +98,7 @@ class ObjectDetectorHelper(
                 NBLUR -> "40k_no_blur.tflite"
                 TINY_NBLUR -> "40k_no_blur_tiny.tflite"
                 TINY_WBLUR -> "40k_with_blur_tiny.tflite"
+                TINY_WBLUR_2 -> "40k_with_blur_tiny_v2.tflite"
                 else -> "40k_no_blur.tflite"
             }
 
@@ -170,6 +171,7 @@ class ObjectDetectorHelper(
         const val NBLUR = 2
         const val TINY_NBLUR = 3
         const val TINY_WBLUR = 3
+        const val TINY_WBLUR_2 = 4
     }
 
 

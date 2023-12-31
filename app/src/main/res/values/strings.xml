@@ -81,6 +81,7 @@
         <item>NBLUR</item>
         <item>TINY_NBLUR</item>
         <item>TINY_WBLUR</item>
+        <item>TINY_WBLUR2</item>
     </string-array>
 
 </resources>
